@@ -75,22 +75,15 @@ var age: Int = 30
 Для ввода данных в Kotlin можно использовать библиотеку.
 
 ```
-import java.util.Scanner;       		//Подключение библиотеки
-
-public class Main 
+fun main()
 {
-    public static void main(String[] args) 
-    {
-        Scanner scanner = new Scanner(System.in);
+    print("Введите ваше имя- ")                 //Вывод строки
+    val a = readLine() ?: ""                    //Ввод данных
 
-        System.out.print("Введите ваше имя- ");         	//Вывод строки
-        String name = scanner.nextLine();               	//Ввод данных
+    print("Введите ваш год рождения- ")         //Вывод строки
+    val s = readLine()?.toIntOrNull() ?: 0      //Ввод данных
 
-        System.out.print("Введите ваш год рождения- ");     	//Вывод строки
-        int age = scanner.nextInt();                        	//Ввод данных
-
-        System.out.println("Привет " + name + ". Вы родились в " + age);    //Ввод всех введеных данных
-    }
+    println("Привет $a Вы родились в $s ")      //Ввод всех веденныхданных
 }
 ```
 
